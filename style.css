@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:#203540;
+}
+::-webkit-scrollbar{
+    width: 7px;
+  }
+  ::-webkit-scrollbar-thumb{
+      background-color: #2094d3e1;
+  }
+  ::-webkit-scrollbar-track{
+      background:  #ffff;
+  }
+  
+header{
+    position: sticky;
+    top: 10px;
+    z-index:1;
+    width: 90%;
+    margin-top: 30px;
+    border-radius: 10px 0;
+    backdrop-filter: blur(10px);
+}
+.btn-light,
+.btn-light:hover{
+    background-color: #2094d3e1;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    color:#fff;
+    border: none;
+}
+.cont .card img{
+    height: 250px;
+}
+/* login */
+  .log input:focus {
+    border-color: #194FA6;
+  }
+/* checkbox */
+
+  
+ 
