@@ -1,5 +1,7 @@
 <?php  
 include "connect_to_mysqli.php";
+$error = '';
+$error_ = '';
 	  if     (isset( $_POST['old'])){
 		    $changepass = $_POST['old'];
 			$npass = $_POST['new'];
@@ -15,18 +17,18 @@ include "connect_to_mysqli.php";
 			           $d_pass = $row['adminPassword'];
 			         if($changepass != $d_pass)
 			            {  
-        				   echo'<center style="color:red;">Incorrect Password</center>
+							echo '<span class="text-center bg-danger p-2 text-light mt-5">Incorrect Password</span>
 						   ' ;
 							
 		            	}
 						else if (strlen($npass) < 5)
 						{
-						echo 'Password must have 5 or more characters';
+						echo '<span class="text-center bg-danger p-2 text-light mt-5">Password must contain at least 5 or more words </span>';
 						}
 						elseif($npass != $confirmp)
 						{
 						
-        				   echo '<center style="color:red;">Password does not match</center>';
+        				   echo '<span class="text-center bg-danger p-2 text-light mt-5">New Password and confirmPassword does not match</span>';
 							
 						}
 		        	 else
@@ -34,7 +36,7 @@ include "connect_to_mysqli.php";
 			                $insert = mysqli_query($connection,"UPDATE admin SET adminPassword= '$npass' where  adminPassword ='$changepass'") or die ('Could not connect: ' .mysqli_error($connection)); 
 	
                        
-                         echo '<span style="color:green;">Password Changed Successfully!</span>';
+                         echo '<span class="text-center bg-primary p-2 text-light mt-5">Password Changed Successfully!</span>';
 							 	
 			            }
 		          }
@@ -44,4 +46,4 @@ include "connect_to_mysqli.php";
 	  }
 	  
 	  
-	  ?>
+	

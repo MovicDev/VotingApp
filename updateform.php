@@ -1,6 +1,3 @@
-<?php
-	include "updatepass.php";
-	?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,9 +29,12 @@
   <button class="btn btn-danger m-3"><a href="data/index.php" class="text-decoration-none text-light">Back</a></button>
 	
           <h2 class="text-center text-light my-3">LOGIN UPDATE</h2>
+        <div class="mx-auto text-center">  <?php
+	                 include "updatepass.php";
+	          ?></div>
            <div class="container">
            <div class="row">
-           <div class="col-7 col-lg-5 p-3 mx-auto mt-5 log" style="border:2px solid #2094d3e1;background:#20a8f138;">
+           <div class="col-10 col-lg-5 p-3 mx-auto mt-5 log" style="border:2px solid #2094d3e1;background:#20a8f138;">
             <form action="" method="POST">
               <label for="Enter your UserName!" class="text-light my-1">Old Password</label>
             <input type="text" name="old" value="" id="input" class="form-control my-2 shadow-none bg-transparent rounded-3 py-2 text-light" required>
